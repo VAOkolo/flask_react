@@ -1,0 +1,12 @@
+{% extends 'default.html' %}
+{% block headers %}
+    <script src={{ url_for('static', filename='./scripts/index.js')}} defer></script>
+{% endblock %}
+{% block title %}Listings{% endblock %}
+{% block content %}
+    <div class="pt-2">
+        <h5>Your new URL for</h5>
+        <p>{{ listing.url}}</p>        
+        <a href={{listing.shorten_url}}> https://url-shorten-quick.herokuapp.com/ <p>{{listing.shorten_url}}</p></a>       
+    </div>
+{% endblock %}
